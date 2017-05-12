@@ -18,7 +18,7 @@ The project includes the following files:
 * model.py containing the script to create and train the model
 * drive.py for driving the car in autonomous mode
 * model.h5 containing a trained convolution neural network
-* run.mp4 containing the video of a successful run using the model.
+* new_run.mp4 containing the video of a successful run using the model.
 * shortcut_model.h5 containing a trained convolution neural network in which the AI takes a shortcut. Note: The data collection didn't include driving outside the track.  
 * shortcut_run.mp4 containing the video of the car taking a shortcut and finishing faster using the shortcut model.
 
@@ -94,7 +94,7 @@ This made my model more robust and now I was able to use Dropout and even Spatia
 ## Results
 After playing and fine tuning the model I was able to let the model run around the track with no issues at variable speed.
 
-<a href="https://www.youtube.com/watch?v=HR0RrjnGh34" target="_blank"><img src="https://i.ytimg.com/vi/HR0RrjnGh34/0.jpg"
+<a href="https://www.youtube.com/watch?v=7j3OzEU_FRs" target="_blank"><img src="https://i.ytimg.com/vi/7j3OzEU_FRs/0.jpg"
 alt="AI cheating and taking a shortcut in the Udacity simulator " width="240" height="180" border="10" /></a>
 
 ## Conclusions
