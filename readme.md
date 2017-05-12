@@ -32,9 +32,11 @@ The data collection was done on a Windows PC with a Racing Wheel. I drove around
 
 ## Data manipulation
 For this project I cropped 50 pixels from the top and 20 from the bottom of the images so that the model wasn't distracted by irrelevant information.
+
 ![img](images/crop.png)
 
 Also, to make sure that I had enough information to make the right turn I augmented the data by flipping the image horizontally.
+
 ![img](images/flip.png)
 
 ## Model architecture
