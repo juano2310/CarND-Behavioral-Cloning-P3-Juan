@@ -17,10 +17,7 @@ Please see the  [rubric points](https://review.udacity.com/#!/rubrics/432/view) 
 The project includes the following files:
 * model.py containing the script to create and train the model
 * drive.py for driving the car in autonomous mode
-* model.h5 containing a trained convolution neural network
-* new_run.mp4 containing the video of a successful run using the model.
-* shortcut_model.h5 containing a trained convolution neural network in which the AI takes a shortcut. Note: The data collection didn't include driving outside the track.  
-* shortcut_run.mp4 containing the video of the car taking a shortcut and finishing faster using the shortcut model.
+* video.py generates video from images in a directory
 
 
 ## General considerations
@@ -45,12 +42,12 @@ From the beginning I decided to use [CNN architecture of NVIDIA](https://arxiv.o
 
 
 ## Epochs and Validation
-I shuffled the samples
-For validation purposes 20% of the training data was held back.
-After few epochs (15) the validation and training loss settle.
-I used an Adam optimizer for training. All training was performed at the fastest graphics setting.
-After the first review of the project I added ModelCheckpoint() to save after each epoch only when there is progress.
-I also generated a graph to visualize the output.
+* I shuffled the samples.
+* For validation purposes 20% of the training data was held back.
+* After few epochs (15) the validation and training loss settle.
+* I used an Adam optimizer for training. All training was performed at the fastest graphics setting.
+* After the first review of the project I added ModelCheckpoint() to save after each epoch only when there is progress.
+* I also generated a graph to visualize the output.
 
 ![img](images/model.png)
 
@@ -97,5 +94,17 @@ After playing and fine tuning the model I was able to let the model run around t
 <a href="https://www.youtube.com/watch?v=7j3OzEU_FRs" target="_blank"><img src="https://i.ytimg.com/vi/7j3OzEU_FRs/0.jpg"
 alt="AI cheating and taking a shortcut in the Udacity simulator " width="240" height="180" border="10" /></a>
 
+
 ## Conclusions
 I think the most valuable lesson was to start small, make sturdy improvement, instead of trying to write the perfect model from scratch. I like the model because it keeps things simple and it is easy to work with.
+
+
+## Using video.py
+
+python video.py run1
+Creates a video based on images found in the run1 directory. The name of the video will be the name of the directory followed by '.mp4', so, in this case the video will be run1.mp4.
+
+Optionally, one can specify the FPS (frames per second) of the video:
+
+python video.py run1 --fps 48
+The video will run at 48 FPS. The default FPS is 60.
